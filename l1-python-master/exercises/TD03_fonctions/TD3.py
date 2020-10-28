@@ -9,7 +9,7 @@ def tempsEnSeconde(temps):
 
 temps = (3,23,1,34)
 print(type(temps))
-print(tempsEnSeconde(temps))   
+print(tempsEnSeconde(temps))
 
 
 def secondeEnTemps(seconde):
@@ -27,16 +27,7 @@ print(temps[0],"jours",temps[1],"heures",temps[2],"minutes",temps[3],"secondes")
 
 #fonction auxiliaire ici
 
-def afficheTemps(temps):
-    afficheUnitéTemps(temps[0], "Jour")
-    afficheUnitéTemps(temps[1], "Heurs")
-    afficheUnitéTemps(temps[2], "Minute")
-    afficheUnitéTemps(temps[3], "Seconde")
-    return
-    
-afficheTemps((1,0,14,23))    
-
-def afficheUnitéTemps(nb, unité) :
+def afficheUnitéTemps(nb, unité):
     if nb == 0 :
         return
     if nb == 1 :
@@ -46,3 +37,11 @@ def afficheUnitéTemps(nb, unité) :
         print(nb, unité + "s")
         return
     
+def afficheTemps(temps):
+    afficheUnitéTemps(temps[0], "Jour")
+    afficheUnitéTemps(temps[1], "Heure")
+    afficheUnitéTemps(temps[2], "Minute")
+    afficheUnitéTemps(temps[3], "Seconde")
+    return
+    
+afficheTemps((1,0,14,23))    
