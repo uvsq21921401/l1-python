@@ -45,3 +45,18 @@ def afficheTemps(temps):
     return
     
 afficheTemps((1,0,14,23))    
+
+def demandeTemps(temps):
+    jour = int(input("Saisir un nombre"))
+    heure = int(input("Saisir un nombre"))
+    while heure > 24 or heure < 0:
+        heure = int(input("Erreur ! Saisir un nombre entre 0 et 24"))
+    minute = int(input("Saisir un nombre"))
+    while minute < 0 or minute > 60 :
+        minute = int(input("Erreur ! Saisir un nombre entre 0 et 60"))
+    seconde = int(input("Saisir un nombre"))
+    while seconde < 0 or seconde > 60 :
+        seconde = int(input("Erreur ! Saisir un nombre entre 0 et 60"))
+    return (jour, heure, minute, seconde)
+
+afficheTemps(demandeTemps(temps))
