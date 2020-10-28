@@ -31,10 +31,10 @@ def afficheUnitéTemps(nb, unité):
     if nb == 0 :
         return
     if nb == 1 :
-        print(nb, unité)
+        print(nb, unité, end=" ")
         return
     if nb > 1 :
-        print(nb, unité + "s")
+        print(nb, unité + "s", end=" ")
         return
     
 def afficheTemps(temps):
