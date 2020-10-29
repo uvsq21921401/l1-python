@@ -60,3 +60,11 @@ def demandeTemps(temps):
     return (jour, heure, minute, seconde)
 
 afficheTemps(demandeTemps(temps))
+
+def sommeTemps(temps1,temps2):
+    tempsEnSeconde(temps1, temps2)
+    tempsTotal = temps1 + temps2
+    secondeEnTemps(afficheTemps(tempsTotal))
+    return
+    
+sommeTemps((2,3,4,25),(5,22,57,1))
