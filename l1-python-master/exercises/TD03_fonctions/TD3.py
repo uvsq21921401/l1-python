@@ -7,9 +7,9 @@ def tempsEnSeconde(temps):
     resultatenS = heureEnMinute * 60 + temps[3]
     return resultatenS 
 
-temps = (3,23,1,34)
-print(type(temps))
-print(tempsEnSeconde(temps))
+#temps = (3,23,1,34)
+#print(type(temps))
+#print(tempsEnSeconde(temps))
 
 
 def secondeEnTemps(seconde):
@@ -22,8 +22,8 @@ def secondeEnTemps(seconde):
     Jour = MinuteEnHeure // 24
     return (Jour, Heure, Minute, Seconde_final)
     
-temps = secondeEnTemps(100000)
-print(temps[0],"jours",temps[1],"heures",temps[2],"minutes",temps[3],"secondes")
+#temps = secondeEnTemps(100000)
+#print(temps[0],"jours",temps[1],"heures",temps[2],"minutes",temps[3],"secondes")
 
 #fonction auxiliaire ici
 
@@ -44,7 +44,7 @@ def afficheTemps(temps):
     afficheUnitéTemps(temps[3], "Seconde")
     return
     
-afficheTemps((1,0,14,23))    
+#afficheTemps((1,0,14,23))    
 
 def demandeTemps(temps):
     jour = int(input("Saisir un nombre"))
@@ -59,13 +59,13 @@ def demandeTemps(temps):
         seconde = int(input("Erreur ! Saisir un nombre entre 0 et 60"))
     return (jour, heure, minute, seconde)
 
-afficheTemps(demandeTemps(temps))
+#afficheTemps(demandeTemps(temps))
 
 def sommeTemps(temps1,temps2):
-    tempsEnSeconde(temps1)
-    tempsEnSeconde(temps2)
+    temps1 = tempsEnSeconde(temps1)
+    temps2 = tempsEnSeconde(temps2)
     tempsTotal = temps1 + temps2
-    secondeEnTemps(afficheTemps(tempsTotal))
+    afficheTemps(secondeEnTemps(tempsTotal))
     return
     
 sommeTemps((2,3,4,25),(5,22,57,1))
