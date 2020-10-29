@@ -68,4 +68,46 @@ def sommeTemps(temps1,temps2):
     afficheTemps(secondeEnTemps(tempsTotal))
     return
     
-sommeTemps((2,3,4,25),(5,22,57,1))
+#sommeTemps((2,3,4,25),(5,22,57,1))
+
+"""calcul un temps - un pourcentage et appeler la fonction en échangeant l'ordre des arguments"""
+def proportionTemps(temps,proportion):
+    if type(proportion) != type(4.0):
+        (temps, proportion) = (proportion, temps)
+    temps = tempsEnSeconde(temps)
+    temps_pourcentage = int(temps * proportion)
+    return secondeEnTemps(temps_pourcentage)
+
+#afficheTemps(proportionTemps(0.2, (2,0,36,0)))
+
+
+""" Dite si une année est bissextile """
+def bissextile(année, jour):
+    if année % 4 == 0 and not (année % 100 != 0 and not (année % 400 == 0)):
+        jour -= 366 #bissextile
+    else :
+        jour -= 365 #pas bissextile()
+    return jour
+
+"""donne le temps écoulé"""
+def tempsEnDate(temps):
+    date = [0, temps[0], temps[1], temps[2], temps[3]]
+    while date[1] > 365 :
+        date[1] = bissextile(date[0], date[1])
+        date[0] += 1
+    return date
+
+def afficheDate(date = -1):
+    if (type(date) == (type(0))):
+        return
+    afficheUnitéTemps(date[0] + 1970, "Année")
+    afficheUnitéTemps(date[1], "Jour")
+    afficheUnitéTemps(date[2], "Heure")
+    afficheUnitéTemps(date[3], "Minute")
+    afficheUnitéTemps(date[4], "Seconde")
+    return
+    
+temps = secondeEnTemps(1000000000)
+afficheTemps(temps)
+afficheDate(tempsEnDate(temps))
+afficheDate()
