@@ -106,9 +106,11 @@ def afficheDate(date = -1):
     afficheUnitéTemps(date[3], "Minute")
     afficheUnitéTemps(date[4], "Seconde")
     return
-    
-temps = secondeEnTemps(1000000000)
-afficheTemps(temps)
-afficheDate(tempsEnDate(temps))
-afficheDate()
 
+#temps = secondeEnTemps(1000000000)
+#afficheTemps(temps)
+#afficheDate(tempsEnDate(temps))
+#afficheDate()
+
+import time
+afficheDate(time.time())
