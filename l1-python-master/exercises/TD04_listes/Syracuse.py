@@ -19,8 +19,9 @@ def testeConjecture(n_max):
     n_min = 1
     while n_min < n_max :
         n_min += 1
-        syracuse(n_min)
-    if n_min == 1 :
+        n = n_min
+        syracuse(n)
+    if n == 1 :
         return True
     return False
 
