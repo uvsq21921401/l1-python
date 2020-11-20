@@ -45,14 +45,3 @@ def tempsVol(n):
 
 
 
-
-def tempsVolListe(n_max):
-    """ Retourne la liste de tous les temps de vol de 1 à n_max """
-    n_min = 0
-    L_max =[]
-    while n_min + 1 > n_max :
-        tempsVol(n_min)
-        L_max.append(n_min)
-    return L_max
-
-print(tempsVolListe(100))
