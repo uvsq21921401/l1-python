@@ -20,7 +20,7 @@ def testeConjecture(n_max):
     while n_min < n_max :
         n_min += 1
         n = n_min
-        syracuse(n)
+        n = syracuse(n)
     if n == 1 :
         return True
     return False
